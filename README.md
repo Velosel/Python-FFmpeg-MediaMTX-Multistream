@@ -501,12 +501,12 @@ The public repository ships `config/chat_config.example.json`. Copy it to `C:\RT
 {
     "twitch": {
         "enabled": true,
-        "username": "ravaelv",
+        "username": "YOUR_USERNAME",
         "client_id": "YOUR_TWITCH_CLIENT_ID",
         "client_secret": "YOUR_TWITCH_CLIENT_SECRET",
         "oauth_token": "YOUR_TWITCH_ACCESS_TOKEN",
         "refresh_token": "YOUR_TWITCH_REFRESH_TOKEN",
-        "channel": "ravaelv"
+        "channel": "YOUR_USERNAME"
     },
     "youtube": {
         "enabled": false,
@@ -515,7 +515,7 @@ The public repository ships `config/chat_config.example.json`. Copy it to `C:\RT
     },
     "tiktok": {
         "enabled": false,
-        "username": "ravaelv"
+        "username": "YOUR_USERNAME"
     }
 }
 ```
@@ -564,7 +564,7 @@ Unified chat aggregator running.
 ```powershell
 cd C:\RTMPStreamer
 .\.venv\Scripts\Activate.ps1
-python ravaelv_stream_chat_updated.py
+python MultistreamApp.py
 ```
 
 The stream publishes to `rtmp://127.0.0.1/live`.
