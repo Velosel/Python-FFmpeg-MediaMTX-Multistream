@@ -1,0 +1,20 @@
+{
+    "twitch": {
+        "enabled": true,
+        "username": "TO_BE_COMPLETED",
+        "client_id": "TO_BE_COMPLETED",
+        "client_secret": "TO_BE_COMPLETED",
+        "oauth_token": "TO_BE_COMPLETED",
+        "refresh_token": "TO_BE_COMPLETED",
+        "channel": "TO_BE_COMPLETED"
+    },
+    "youtube": {
+        "enabled": false,
+        "api_key": "",
+        "video_id": ""
+    },
+    "tiktok": {
+        "enabled": false,
+        "username": "TO_BE_COMPLETED"
+    }
+}
