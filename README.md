@@ -170,7 +170,7 @@ python chat_aggregator_auto_refresh.py
 # 3. Stream (new window)
 cd C:\RTMPStreamer
 .\.venv\Scripts\Activate.ps1
-python ravaelv_stream_chat_updated.py
+python MultistreamApp.py
 ```
 
 ---
@@ -189,7 +189,7 @@ ravaelv-multistream/
 ├── config/
 │   └── chat_config.example.json
 ├── src/
-│   ├── ravaelv_stream_chat_updated.py
+│   ├── MultistreamApp.py
 │   └── chat_aggregator_auto_refresh.py
 └── docs/
     ├── ARCHITECTURE.md
@@ -207,7 +207,7 @@ C:\MediaMTX\
 
 C:\RTMPStreamer\
 ├── .venv\
-├── ravaelv_stream_chat_updated.py
+├── MultistreamApp.py
 ├── chat_aggregator_auto_refresh.py
 ├── chat_config.json          # private — never commit
 ├── chat_overlay.txt          # generated at runtime
