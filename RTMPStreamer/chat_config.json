@@ -1,20 +1,19 @@
 {
     "twitch": {
         "enabled": true,
-        "username": "TO_BE_COMPLETED",
-        "client_id": "TO_BE_COMPLETED",
-        "client_secret": "TO_BE_COMPLETED",
-        "oauth_token": "TO_BE_COMPLETED",
-        "refresh_token": "TO_BE_COMPLETED",
-        "channel": "TO_BE_COMPLETED"
+        "username": "USERNAME",
+        "client_id": "FROM_TWITCH_DEV_CONSOLE",
+        "client_secret": "FROM_TWITCH_DEV_CONSOLE",
+        "refresh_token": "RefreshToken",
+        "channel": "Channel_Name"
     },
     "youtube": {
-        "enabled": false,
-        "api_key": "",
-        "video_id": ""
+        "enabled": true,
+        "api_key": "GOOGLE_CLOUD_YOUTUBE_V3_API",
+        "handle": "@HANDLER_CHANNEL_NAME"
     },
     "tiktok": {
         "enabled": false,
-        "username": "TO_BE_COMPLETED"
+        "username": "USERNAME"
     }
 }

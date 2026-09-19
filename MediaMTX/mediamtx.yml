@@ -881,5 +881,7 @@ paths:
     source: publisher
     forward:
       - dest: rtmps://ingest.global-contribute.live-video.net/app#YOUR_STREAM_KEY
-  
+          # YouTube
+      - dest: rtmp://x.rtmp.youtube.com/live2#YOUR_STREAM_KEY
   all_others:
+s
