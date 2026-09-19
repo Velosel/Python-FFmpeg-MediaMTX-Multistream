@@ -1,6 +1,6 @@
 <div align="center">
 
-# USERNAME Multistream
+# Multistream — Python + FFmpeg + MediaMTX
 
 **Encode once on your Windows PC. Relay everywhere.**
 
@@ -191,7 +191,13 @@ cd C:\RTMPStreamer
 ```powershell
 # 3. Chat aggregator
 cd C:\RTMPStreamer
+```powershell
+# 3. Chat aggregator
+cd C:\RTMPStreamer
+.\.venv\Scripts\Activate.ps1
+python MultistreamApp.py
 .\.venv\Scripts\python.exe chat_aggregator_auto_refresh_youtube_auto.py
+```
 ```
 
 ---
@@ -204,25 +210,53 @@ The project lives in one folder. Every script and the launcher find their files 
 PROJECT\
 ├── README.md
 ├── LICENSE
+PROJECT\
+├── README.md
+├── LICENSE
+├── SECURITY.md
+├── .gitignore
 ├── .gitattributes
+├── requirements.txt
+├── config/
+│   └── chat_config.example.json
+├── src/
+│   ├── MultistreamApp.py
+│   └── chat_aggregator_auto_refresh.py
+├── docs/
+│   ├── ARCHITECTURE.md
+│   ├── SETUP.md
+│   ├── CHAT.md
+│   └── TROUBLESHOOTING.md
 ├── FFmpeg\                       # optional bundled FFmpeg (bin\ffmpeg.exe or ffmpeg.exe)
 ├── MediaMTX\
 │   ├── mediamtx.exe
 │   └── mediamtx.yml              # may contain your stream key — keep it out of git
-└── RTMPStreamer\
-    ├── StreamStart.bat
-    ├── MultistreamApp.py
-    ├── chat_aggregator_auto_refresh_youtube_auto.py
-    ├── requirements.txt
-    ├── .venv\
-    ├── chat_config.json           # private — never commit
-    ├── chat_overlay.txt           # generated: chat panel text for FFmpeg
-    ├── chat_history.sqlite3       # generated: chat history (plus -wal / -shm files)
-    └── chat_overlay_window.json   # generated: native window position, size, lock, visibility
-```
+├── RTMPStreamer\
+│   ├── StreamStart.bat
+│   ├── MultistreamApp.py
+│   ├── chat_aggregator_auto_refresh_youtube_auto.py
+│   ├── requirements.txt
+│   ├── .venv\
+│   ├── chat_config.json           # private — never commit
+│   ├── chat_overlay.txt           # generated: chat panel text for FFmpeg
+│   ├── chat_history.sqlite3       # generated: chat history (plus -wal / -shm files)
+│   └── chat_overlay_window.json   # generated: native window position, size, lock, visibility
 
-> [!NOTE]
-> The commands in this README use `C:\MediaMTX` and `C:\RTMPStreamer` as examples, i.e. `PROJECT` = `C:\`. Substitute your own project folder.
+Local Windows runtime:
+
+```text
+C:\MediaMTX\
+├── mediamtx.exe
+└── mediamtx.yml
+
+C:\RTMPStreamer\
+├── .venv\
+├── MultistreamApp.py
+├── chat_aggregator_auto_refresh.py
+├── chat_config.json          # private — never commit
+├── chat_overlay.txt          # generated at runtime
+└── requirements.txt
+```
 
 ---
 
@@ -634,11 +668,11 @@ The public repository ships `config/chat_config.example.json`. Copy it to `C:\RT
 {
     "twitch": {
         "enabled": true,
-        "username": "USERNAME",
+        "username": "YOUR_USERNAME",
         "client_id": "YOUR_TWITCH_CLIENT_ID",
         "client_secret": "YOUR_TWITCH_CLIENT_SECRET",
         "refresh_token": "YOUR_TWITCH_REFRESH_TOKEN",
-        "channel": "USERNAME"
+        "channel": "YOUR_USERNAME"
     },
     "youtube": {
         "enabled": true,
@@ -649,7 +683,7 @@ The public repository ships `config/chat_config.example.json`. Copy it to `C:\RT
     },
     "tiktok": {
         "enabled": false,
-        "username": "USERNAME"
+        "username": "YOUR_USERNAME"
     }
 }
 ```
@@ -750,7 +784,15 @@ Chat database: C:\RTMPStreamer\chat_history.sqlite3
 
 If no stream is live yet, YouTube prints `no active livestream found. Retrying in 60s.` and keeps checking.
 
+```powershell
+cd C:\RTMPStreamer
+.\.venv\Scripts\Activate.ps1
+python MultistreamApp.py
+```
+
 The stream publishes to `rtmp://127.0.0.1/live`. Stop any window with `Ctrl+C`.
+
+If no stream is live yet, YouTube prints `no active livestream found. Retrying in 60s.` and keeps checking.
 
 ---
 
