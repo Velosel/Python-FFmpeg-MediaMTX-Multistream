@@ -210,18 +210,10 @@ The project lives in one folder. Every script and the launcher find their files 
 PROJECT\
 ├── README.md
 ├── LICENSE
-PROJECT\
-├── README.md
-├── LICENSE
 ├── SECURITY.md
 ├── .gitignore
 ├── .gitattributes
 ├── requirements.txt
-├── config/
-│   └── chat_config.example.json
-├── src/
-│   ├── MultistreamApp.py
-│   └── chat_aggregator_auto_refresh.py
 ├── docs/
 │   ├── ARCHITECTURE.md
 │   ├── SETUP.md
@@ -232,7 +224,7 @@ PROJECT\
 │   ├── mediamtx.exe
 │   └── mediamtx.yml              # may contain your stream key — keep it out of git
 ├── RTMPStreamer\
-│   ├── StreamStart.bat
+│   ├── StreamStart.bat           # Used to start everything at once after you setup the project properly.
 │   ├── MultistreamApp.py
 │   ├── chat_aggregator_auto_refresh_youtube_auto.py
 │   ├── requirements.txt
@@ -241,24 +233,6 @@ PROJECT\
 │   ├── chat_overlay.txt           # generated: chat panel text for FFmpeg
 │   ├── chat_history.sqlite3       # generated: chat history (plus -wal / -shm files)
 │   └── chat_overlay_window.json   # generated: native window position, size, lock, visibility
-
-Local Windows runtime:
-
-```text
-C:\MediaMTX\
-├── mediamtx.exe
-└── mediamtx.yml
-
-C:\RTMPStreamer\
-├── .venv\
-├── MultistreamApp.py
-├── chat_aggregator_auto_refresh.py
-├── chat_config.json          # private — never commit
-├── chat_overlay.txt          # generated at runtime
-└── requirements.txt
-```
-
----
 
 ## Requirements
 
