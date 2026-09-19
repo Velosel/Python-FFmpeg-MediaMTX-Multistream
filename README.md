@@ -1,6 +1,6 @@
 <div align="center">
 
-# Ravaelv Multistream
+# Multistream — Python + FFmpeg + MediaMTX
 
 **Encode once on your Windows PC. Relay everywhere.**
 
